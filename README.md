@@ -1,6 +1,6 @@
 # Vibr8Vault — Official Releases
 
-> This repository hosts official release assets for **Vibr8Vault**, a self-hosted, open-source secrets management system built for developers who want control without complexity.
+> This repository hosts official release assets for **[Vibr8Vaul](https://vault.vibr8lab.work)t**, a self-hosted, open-source secrets management system built for developers who want control without complexity.
 
 ---
 
@@ -32,8 +32,8 @@ Each release includes:
 | `vibr8vault-darwin-amd64` | macOS binary (Intel) |
 | `vibr8vault-darwin-arm64` | macOS binary (Apple Silicon) |
 | `vibr8vault-windows-amd64.exe` | Windows binary (x86_64) |
-| `checksums.sha256` | SHA-256 checksums for all binaries |
-| `docker-compose.yml` | Docker Compose quickstart |
+| `user-guide.md` | The official user guide |
+| `SKILL.md` | The Claude Code skill to interact with the Vibr8Vault |
 
 ---
 
@@ -52,23 +52,6 @@ sha256sum --check --ignore-missing checksums.sha256
 # Make executable and move to PATH
 chmod +x vibr8vault-linux-amd64
 sudo mv vibr8vault-linux-amd64 /usr/local/bin/vibr8vault
-```
-
-### Docker
-
-```bash
-docker run -d \
-  --name vibr8vault \
-  -p 8200:8200 \
-  -v vibr8vault-data:/data \
-  vibr8soft/vibr8vault:latest
-```
-
-### Docker Compose
-
-```bash
-curl -LO https://github.com/vibr8soft/vibr8vault-releases/releases/latest/download/docker-compose.yml
-docker compose up -d
 ```
 
 ---
